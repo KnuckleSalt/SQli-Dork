@@ -80,8 +80,10 @@ detection_patterns:
 
 ## 🔑 Generate Encryption Key
 
+```
 from cryptography.fernet import Fernet
 print(Fernet.generate_key().decode())
+```
 
 ## 🔒 Example Payload Encryption
 
