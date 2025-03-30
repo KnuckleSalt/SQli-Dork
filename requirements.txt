@@ -1,0 +1,4 @@
+pyyaml
+requests
+fake-useragent
+cryptography
