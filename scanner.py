@@ -17,6 +17,18 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from fake_useragent import UserAgent
 from cryptography.fernet import Fernet
 
+# Banner
+BANNER = """
+    .▄▄ · .▄▄▄  ▄▄▌  ▪      ·▄▄▄▄        ▄▄▄  ▄ •▄  v.0.1 (beta)
+    ▐█ ▀. ▐▀•▀█ ██•  ██     ██▪ ██ ▪     ▀▄ █·█▌▄▌▪
+    ▄▀▀▀█▄█▌·.█▌██▪  ▐█·    ▐█· ▐█▌ ▄█▀▄ ▐▀▀▄ ▐▀▀▄·
+    ▐█▄▪▐█▐█▪▄█·▐█▌▐▌▐█▌    ██. ██ ▐█▌.▐▌▐█•█▌▐█.█▌
+     ▀▀▀▀ ·▀▀█. .▀▀▀ ▀▀▀    ▀▀▀▀▀•  ▀█▄▀▪.▀  ▀·▀  ▀
+            Builded by team: @KnuckleSalt 
+
+"""
+print(BANNER)
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
