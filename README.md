@@ -148,12 +148,13 @@ print("Config file generated successfully!")
 
 Basic command:
 
-```bash
+```
 python scanner.py --dork "inurl:index.php?id=" --max-results 50 --stealth
 ```
 
 ## Parameter options:
 
+```
 --dork          Google search query (required)
 --site          Filter by domain
 --file-type     Filter by file type
@@ -163,7 +164,7 @@ python scanner.py --dork "inurl:index.php?id=" --max-results 50 --stealth
 --delay         Base delay between requests (default: 1.0)
 --random-agent  Random User-Agent rotation
 --output        Report format (console/json/csv)
-
+```
 
 ---
 
