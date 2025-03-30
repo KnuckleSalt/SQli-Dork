@@ -29,9 +29,9 @@ git clone https://github.com/KnuckleSalt/SQli-Dork
 2. Install dependencies
 
 
-
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
@@ -39,6 +39,7 @@ pip install -r requirements.txt
 
 Create a file named config.yaml using the following template:
 
+```bash
 security:
   encryption_key: "base64_32_byte_fernet_key"
 
@@ -75,20 +76,23 @@ detection_patterns:
   - "error in your SQL syntax"
   - "Warning: mysql"
   - "PostgreSQL.*ERROR"
+```
 
-🔑 Generate Encryption Key
+## 🔑 Generate Encryption Key
 
 from cryptography.fernet import Fernet
 print(Fernet.generate_key().decode())
 
-🔒 Example Payload Encryption
+## 🔒 Example Payload Encryption
 
+```bash
 key = Fernet.generate_key()
 cipher = Fernet(key)
 encrypted_payload = cipher.encrypt(b"' OR 1=1 -- ").decode()
 print(encrypted_payload)
+```
 
-##Example auto generate config.yaml
+## Example auto generate config.yaml
 
 ```bash
 from cryptography.fernet import Fernet
@@ -140,19 +144,15 @@ print("Config file generated successfully!")
 
 ---
 
-🚀 Usage
+## 🚀 Usage
 
 Basic command:
 
-python scanner.py \
-  --dork "inurl:index.php?id=" \
-  --max-results 50 \
-  --stealth \
-  --jitter 0.5 \
-  --random-agent \
-  --output console
+```bash
+python scanner.py --dork "inurl:index.php?id=" --max-results 50 --stealth
+```
 
-Parameter options:
+## Parameter options:
 
 --dork          Google search query (required)
 --site          Filter by domain
@@ -167,18 +167,18 @@ Parameter options:
 
 ---
 
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 
 This tool is for educational and legal testing purposes only. Users are fully responsible for their own usage of this tool.
 
 
 ---
 
-🙌 Special Thanks
+## 🙌 Special Thanks
 
 Thanks to the open source contributors:
 
-synnaulaid - Inspiration for developing security tools and debugging
+- [synnaulaid](https://github.com/synnaulaid) - Inspiration for developing security tools and debugging
 
 
 
