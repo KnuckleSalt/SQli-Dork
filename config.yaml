@@ -1,0 +1,48 @@
+# Credentials configuration: Contains API keys and Custom Search Engine ID.
+credentials:
+  api_key: YOUR_APIKEY         # API key for authenticating requests
+  cse_id: YOUR_CSE             # Custom Search Engine ID for Google CSE
+
+# Detection patterns: List of regex patterns to detect various SQL and database error messages.
+detection_patterns:
+  - SQL syntax.*error         # Detects errors in SQL syntax messages
+  - Warning: .*MySQL          # Captures warnings related to MySQL
+  - PostgreSQL.*ERROR         # Matches error messages from PostgreSQL
+  - ORA-[0-9]{5}              # Matches Oracle errors with specific error codes
+  - Unclosed quotation mark   # Detects messages indicating an unclosed quotation mark
+  - Syntax error in string literal  # Identifies syntax errors in string literals
+  - Microsoft OLE DB Provider # Matches errors from Microsoft OLE DB Provider
+
+# Endpoints configuration: Specifies the API endpoint URLs used by the application.
+endpoints:
+  google: https://www.googleapis.com/customsearch/v1  # Google Custom Search API endpoint
+
+# Network configuration: Settings for proxies and network timeout.
+network:
+  proxies: {}                # No proxy configured by default; add proxy settings if needed
+  timeout: 15                # Network timeout duration in seconds
+
+# Payloads configuration: Contains encrypted payloads for different database systems.
+payloads:
+  mysql:
+  - gAAAAABn6RJ6A-aBrJo_ZlI-SgAkEdQTmeYnN1BDZkvrUZEos6NY1te6TqSGGiwGkPYxfoXoH8J6Ye7WyIMhe9hKiD-NtvgwDA==
+  - gAAAAABn6RJ6H9y33m87wEJAfHNdjncAptI1CGw5xjrKVfET4uWni9XMItY1FoukhXaRX96-kafe8s-vthEg-QLYatnuxvCF6qNJ1glJVUsPriy4k1ZDXUU=
+  - gAAAAABn6RJ63bnNcISQ7uCpeg5IIXMI3oHkOwab-b1iDnuFSNCu868B2fUmyGpjFHrmY6sNjhuQ1QkMyOlnbvycTsridfe02a_O5phu7dc35JzG1U4KMYA=
+  postgresql:
+  - gAAAAABn6RJ6j6X3Je_WLAH264_34tFW7ksLYjAjcU4JZLb4agqRgAIDM7XqOCsmpdS9rsASDR8zIGvTekuRNYTBOh7M4lIiMQ==
+  - gAAAAABn6RJ6kfSDnTHI4bAwoMvTpwNKiIXhSgjtP_Joqkq6ony3xHLwqV3ZQ-UepmdKJ1yFzrnjdG05vuu7t7rTLFL2Y1iHeypAlONJVSG2h5Isa283fFvA_YeJJ9xl6hWXP_shacDu
+  - gAAAAABn6RJ6K2UVHUeBg19TAhy_QWUPHFxlSFva0OuFghfciBqf8j1_pW76gGpX_n1HoeOT4jnrcWz8pTZ9tvLkkCA00_H8NfgqAGK17TnhrL9vBFvIsHCj7XJMbx97nLbHI-pOHTsdErsOEkntkXoAg075Ydy-IQ==
+
+# Performance configuration: Specifies performance-related settings.
+performance:
+  threads: 20                # Number of threads to use for parallel processing
+
+# Security configuration: Contains security related settings like encryption key.
+security:
+  encryption_key: YOUR_ENCRYPTION_KEY   # Encryption key used for securing sensitive data
+
+# Stealth configuration: Settings related to stealth mode and request obfuscation.
+stealth:
+  referers:
+  - https://google.com        # List of referers to be used in requests for anonymity
+  time_based_threshold: 3.5   # Threshold (in seconds) for time-based operations
